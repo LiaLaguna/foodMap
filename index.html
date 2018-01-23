@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Food Map</title>
+
+  </head>
+  <body>
+
+      <div class="splash">
+        <img src="assets/images/foodmap.svg" alt="logo">
+      </div>
+
+      <div class="app">
+
+        <!-- LOGO -->
+        <head>
+          <div class="container-fluid logo">
+            <img src="assets/images/foodmap-white.svg" alt="logo blanco">
+          </div>
+        </head>
+
+        <!-- MAPA -->
+        <section class="aparecer">
+          <div class="container map">
+            <div class="row">
+              <div class="col-sm-10 mx-auto">
+                <div id="map" class="img-fluid shadows">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--FILTRO-->
+        <section>
+          <div class="container filter">
+            <div class="row">
+              <div class="col-sm-12 mt-4">
+                <p class="filter-title">COMIDA CERCA DE TI</p>
+              </div>
+            </div>
+
+            <div class="col-sm-8 mx-auto">
+              <div class="input-group shadows">
+                <input type="text" class="form-control" placeholder="Filtrar restaurantes" aria-label="Filtrar restaurantes" aria-describedby="basic-addon2" id="search">
+                  <div class="input-group-append">
+                    <span class="input-group-text" id="searcher"><i class="fa fa-search"></i></span>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--IMÁGENES-->
+        <section>
+          <div class="container mt-3">
+            <div class="row">
+              <div class="col-sm-4 mt-4">
+                <div class="img-fluid img-restaurant shadows">
+                  <img src="assets/images/1.jpg" alt="Restaurant1">
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary button-restaurant" data-toggle="modal" data-target="#exampleModal1">
+                    <p class="restaurant-name1">RN</p>
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title restaurant-name1" id="exampleModalLabel">Restaurante</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="map-modal mx-auto shadows"></div>
+                          <div class="container">
+                            <div class="row mt-4">
+                              <div class="col-sm-4 offset-sm-1 address">
+                                <p class="style-modal" id="address1">Dirección</p>
+                              </div>
+                              <div class="col-sm-4 offset-sm-2 price">
+                                <p class="style-modal" id="price1">Precio</p>
+                                <p class="style-modal" id="rating1">Rating</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Ordenar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="col-sm-4 mt-4">
+                <div class="img-fluid img-restaurant shadows">
+                  <img src="assets/images/2.jpg" alt="Restaurant2">
+                  <button type="button" class="btn btn-primary button-restaurant" data-toggle="modal" data-target="#exampleModal2">
+                    <p class="restaurant-name2">RN</p>
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title restaurant-name2" id="exampleModalLabel">Restaurante</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="map-modal mx-auto shadows"></div>
+                          <div class="container">
+                            <div class="row mt-4">
+                              <div class="col-sm-4 offset-sm-1 address">
+                                <p class="style-modal" id="address2">Dirección</p>
+                              </div>
+                              <div class="col-sm-4 offset-sm-2 price">
+                                <p class="style-modal" id="price2">Precio</p>
+                                <p class="style-modal" id="rating2">Rating</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Ordenar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-4 mt-4">
+                <div class="img-fluid img-restaurant shadows">
+                  <img src="assets/images/3.jpg" alt="Restaurant3">
+                  <button type="button" class="btn btn-primary button-restaurant" data-toggle="modal" data-target="#exampleModal3">
+                    <p class="restaurant-name3">RN</p>
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title restaurant-name3" id="exampleModalLabel">Restaurante</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="map-modal mx-auto shadows"></div>
+                          <div class="container">
+                            <div class="row mt-4">
+                              <div class="col-sm-4 offset-sm-1 address">
+                                <p class="style-modal" id="address3">Dirección</p>
+                              </div>
+                              <div class="col-sm-4 offset-sm-2 price">
+                                <p class="style-modal" id="price3">Precio</p>
+                                <p class="style-modal" id="rating3">Rating</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Ordenar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-4 mt-4">
+                <div class="img-fluid img-restaurant shadows">
+                  <img src="assets/images/4.jpg" alt="Restaurant4">
+                  <button type="button" class="btn btn-primary button-restaurant" data-toggle="modal" data-target="#exampleModal4">
+                    <p class="restaurant-name4">RN</p>
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title restaurant-name4" id="exampleModalLabel">Restaurante</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="map-modal mx-auto shadows"></div>
+                          <div class="container">
+                            <div class="row mt-4">
+                              <div class="col-sm-4 offset-sm-1 address">
+                                <p class="style-modal" id="address4">Dirección</p>
+                              </div>
+                              <div class="col-sm-4 offset-sm-2 price">
+                                <p class="style-modal" id="price4">Precio</p>
+                                <p class="style-modal" id="rating4">Rating</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Ordenar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-4 mt-4">
+                <div class="img-fluid img-restaurant shadows">
+                  <img src="assets/images/5.jpg" alt="Restaurant5">
+                  <button type="button" class="btn btn-primary button-restaurant" data-toggle="modal" data-target="#exampleModal5">
+                    <p class="restaurant-name5">RN</p>
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title restaurant-name5" id="exampleModalLabel">Restaurante</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="map-modal mx-auto shadows"></div>
+                          <div class="container">
+                            <div class="row mt-4">
+                              <div class="col-sm-4 offset-sm-1 address">
+                                <p class="style-modal" id="address5">Dirección</p>
+                              </div>
+                              <div class="col-sm-4 offset-sm-2 price">
+                                <p class="style-modal" id="price5">Precio</p>
+                                <p class="style-modal" id="rating5">Rating</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Ordenar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-4 mt-4">
+                <div class="img-fluid img-restaurant shadows">
+                  <img src="assets/images/6.jpg" alt="Restaurant6">
+                  <button type="button" class="btn btn-primary button-restaurant" data-toggle="modal" data-target="#exampleModal6">
+                    <p class="restaurant-name6">RN</p>
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title restaurant-name6" id="exampleModalLabel">Restaurante</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="map-modal mx-auto shadows"></div>
+                          <div class="container">
+                            <div class="row mt-4">
+                              <div class="col-sm-4 offset-sm-1 address">
+                                <p class="style-modal" id="address6">Dirección</p>
+                              </div>
+                              <div class="col-sm-4 offset-sm-2 price">
+                                <p class="style-modal" id="price6">Precio</p>
+                                <p class="style-modal" id="rating6">Rating</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Ordenar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-4 mt-4">
+                <div class="img-fluid img-restaurant shadows">
+                  <img src="assets/images/7.jpg" alt="Restaurant7">
+                  <button type="button" class="btn btn-primary button-restaurant" data-toggle="modal" data-target="#exampleModal7">
+                    <p class="restaurant-name7">RN</p>
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title restaurant-name7" id="exampleModalLabel">Restaurante</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="map-modal mx-auto shadows"></div>
+                          <div class="container">
+                            <div class="row mt-4">
+                              <div class="col-sm-4 offset-sm-1 address">
+                                <p class="style-modal" id="address7">Dirección</p>
+                              </div>
+                              <div class="col-sm-4 offset-sm-2 price">
+                                <p class="style-modal" id="price7">Precio</p>
+                                <p class="style-modal" id="rating7">Rating</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Ordenar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-4 mt-4">
+                <div class="img-fluid img-restaurant shadows">
+                  <img src="assets/images/8.jpg" alt="Restaurant8">
+                  <button type="button" class="btn btn-primary button-restaurant" data-toggle="modal" data-target="#exampleModal8">
+                    <p class="restaurant-name8">RN</p>
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title restaurant-name8" id="exampleModalLabel">Restaurante</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="map-modal mx-auto shadows"></div>
+                          <div class="container">
+                            <div class="row mt-4">
+                              <div class="col-sm-4 offset-sm-1 address">
+                                <p class="style-modal" id="address8">Dirección</p>
+                              </div>
+                              <div class="col-sm-4 offset-sm-2 price">
+                                <p class="style-modal" id="price8">Precio</p>
+                                <p class="style-modal" id="rating8">Rating</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Ordenar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-4 mt-4">
+                <div class="img-fluid img-restaurant shadows">
+                  <img src="assets/images/9.jpg" alt="Restaurant9">
+                  <button type="button" class="btn btn-primary button-restaurant" data-toggle="modal" data-target="#exampleModal9">
+                    <p class="restaurant-name9">RN</p>
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title restaurant-name9" id="exampleModalLabel">Restaurante</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="map-modal mx-auto shadows"></div>
+                          <div class="container">
+                            <div class="row mt-4">
+                              <div class="col-sm-4 offset-sm-1 address">
+                                <p class="style-modal" id="address9">Dirección</p>
+                              </div>
+                              <div class="col-sm-4 offset-sm-2 price">
+                                <p class="style-modal" id="price9">Precio</p>
+                                <p class="style-modal" id="rating9">Rating</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Ordenar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+
+    <!-- JQUERY JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCILYYTJFQHN4_beMQZ3Du0IbgAkLxI7K0"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>

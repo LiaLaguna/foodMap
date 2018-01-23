@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.shadows {
+  box-shadow: 3px 5px 15px #71777C;
+}
+
+.splash {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 200vh;
+  z-index: 1;
+  background-color: white;
+  text-align: center;
+}
+
+.splash > img {
+  height: 60vh;
+  margin-top: 10em;
+}
+
+.app {
+  background-color: white;
+  height: 200vh;
+}
+
+/*** HEAD ***/
+.logo {
+  background: linear-gradient(-180deg, #FAD961, #F76B1C);
+  height: 40vh;
+  text-align: center;
+}
+
+.logo > img {
+  height: 25vh;
+  margin-top: -0.7em;
+}
+
+/*** MAPA ***/
+#map {
+  height: 50vh;
+  margin-top: -7em;
+}
+
+/*** FILTER ***/
+.filter {
+  width: 100%;
+}
+
+.filter-title {
+  color: #2b2b2b;
+  text-align: center;
+  font-size: 2em;
+}
+
+.input-search {
+  margin: 0 auto;
+}
+
+/* IMAGEN */
+.img-restaurant > img {
+  width: 100%;
+  height: 20vh;
+}
+
+.button-restaurant {
+  width: 100%;
+  height: 6vh;
+  background: white !important;
+  color: #2b2b2b;
+  border: none;
+  border-radius: 0;
+}
+.button-restaurant:hover {
+  color: #F76B1C;
+}
+
+/* Modal */
+.map-modal {
+  background-image: url("../assets/images/mapa-modal.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 18em;
+  width: 18em;
+}
+
+.address, .price {
+  height: 5em;
+  width: 5em;
+}
+
+.style-modal {
+  font-size: 15px;
+}
